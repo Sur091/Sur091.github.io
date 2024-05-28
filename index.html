@@ -44,26 +44,26 @@
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-      <a-assets>
-        <a-asset-item src="assets/animated_butterfly.glb" id="butterflyModel"></a-asset-item>
-        <img src="assets/BlueFlowers.jpg" id="blueFlowerImg" />
-      </a-assets>
       <!-- a-nft is the anchor that defines an Image Tracking entity -->
       <!-- on 'url' use the path to the Image Descriptors created before. -->
       <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
-      <a-nft 
+      <a-nft
         type="nft"
-        url="./assets/BlueFlowers"
+        url="https://cdn.glitch.global/acf699a1-36d2-496c-a7b5-c570b2a98d87/BlueFlowers"
         smooth="true"
         smoothCount="10"
-        smoothTolerance=".01"
+        smoothTolerance=".1"
         smoothThreshold="5">
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-          <a-entity
-            gltf-model="./assets/animated_butterfly.glb"
-            scale="1 1 1"
-            position="0 0 0"></a-entity>
+            <a-entity
+                gltf-model="src: url(https://cdn.glitch.global/acf699a1-36d2-496c-a7b5-c570b2a98d87/animated_butterfly.glb?v=1716582766711)"
+                scale="50 50 50"
+                rotation="90 90 90"
+                my-circle-animation="radius=0.5; tilt: 0.4"
+                position="50 50 0">
+            </a-entity>
             
+          <!-- <a-plane width="1" height="1" color="#ccc"></a-plane> -->
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
