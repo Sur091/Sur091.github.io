@@ -152,3 +152,4 @@ AFRAME.registerComponent('animation-mixer', {
   function regExpEscape(s) {
     return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
   }
+
