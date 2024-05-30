@@ -14,6 +14,7 @@
     <script src="./pop-out.js"></script>
     <script src="./animation-mixer.js"></script>
     <script src="./circle-animation.js"></script>
+    <script src="./add-friend.js"></script>
 
     <!-- style for the loader -->
     <style>
@@ -72,14 +73,30 @@
                 scale="50 50 50"
                 rotation="180 0 180"
                 animation-mixer="clip: Flying"
-                position="300 0 -300">
+                position="300 0 -300"
+                circle-animation="radius: 300">
             </a-entity>
+            <!-- <a-entity
+                gltf-model="#butterflyModel"
+                scale="50 50 50"
+                rotation="180 0 180"
+                animation-mixer="clip: Flying"
+                position="300 0 -300"
+                circle-animation="radius: 200">
+            </a-entity> -->
             <!-- <a-image src="#blueFlowers"></a-image> -->
             
           <!-- <a-plane width="1" height="1" color="#ccc"></a-plane> -->
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
-      <a-entity camera></a-entity>
+      <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+      <a-camera
+        id="camera"
+        raycaster="objects: .cantap"
+        cursor="
+        fuse: false;
+        rayOrigin: mouse;">
+      </a-camera>
     </a-scene>
   </body>
 </html>
